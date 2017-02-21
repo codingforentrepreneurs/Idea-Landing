@@ -9,3 +9,4 @@ Pillow==4.0.0
 psycopg2==2.6.2
 pyparsing==2.1.10
 six==1.10.0
+whitenoise==3.3.0
