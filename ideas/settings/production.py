@@ -25,7 +25,19 @@ SECRET_KEY = '+9!j2(jk7v$7+0b1v(z9+3vnm(jb0u@&w68t#5_e8s9-lbfhv-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['cfeideas.herokuapp.com']
+ALLOWED_HOSTS = ['cfeideas.herokuapp.com', '.knockhq.com']
+
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'youremail@gmail.com' #my gmail username
+# EMAIL_HOST_PASSWORD = 'yourpassword' #my gmail password
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = "Justin <hungrypy@gmail.com>"
+
+
+# ADMINS = [('Justin', EMAIL_HOST_USER)]
+# MANAGERS = ADMINS
+
 
 
 # Application definition
