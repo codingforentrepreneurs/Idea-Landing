@@ -1,72 +1,36 @@
 {% extends "base.html" %}
 
+<style>
+{% block styles %}
+    {% if page_obj.nav_color != '#000000' %}
+    .navbar-inverse {
+        background-color: {{ page_obj.nav_color }};
+        border-color:{{ page_obj.nav_color }}
+    }
+    {% endif %}
+    {% if not page_obj.show_nav %}
+        body {
+          padding-top: 0px;
+          padding-bottom: 0px;
+        }
+    {% endif %}
+{% endblock %}
+</style>
 
 {% block content %}
-<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Knock HQ</a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <!-- <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form> -->
-        </div><!--/.navbar-collapse -->
-      </div>
-    </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>{{ page_obj.title }}</h1>
-        <p>{{ page_obj.title_description|linebreaks }}</p>
-        {% if title_btn_url %}
-        <p><a class="btn btn-primary btn-lg" href="{{ title_btn_url }}" role="button">{{ title_btn }}</a></p>
-        {% endif %}
-      </div>
-    </div>
+{% if page_obj.show_nav %}
+    {% include 'navbar.html' %}
+{% endif %}
+    {% if page_obj.layout == 'stacked' %}
+        {% include 'pages/snippet/stacked-layout.html' with page_obj=page_obj form=form %}
 
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class='row'>
-        <div class='col-sm-8 col-sm-offset-2'>
-          <div class='row'>
-           <div class="col-xs-4">
-              <h2>Join us</h2>
-            </div>
-            <div class='col-xs-8'>
-                <p>
-                {% include 'pages/snippet/join-form.html' with form=form %} 
-                </p>
-            </div>
-        </div></div>
-        </div>
-     
-       
-      </div>
-      <div class='container'>
-            {{ page_obj.content|safe }}
+    {% else %}
+        {% include 'pages/snippet/standard-layout.html' with page_obj=page_obj form=form %}
 
-      </div>
 
-      <hr>
-     <div class='container'>
-      <footer>
-        <p>&copy; 2017 KnockHQ, Inc.</p>
-      </footer>
-    </div> <!-- /container -->
+      {% endif %}
+   
 
 
 {% endblock content %}
