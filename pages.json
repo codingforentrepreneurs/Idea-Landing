@@ -3,7 +3,7 @@
     "model": "pages.page",
     "pk": 1,
     "fields": {
-        "title": "KnockHQ",
+        "title": "KnockHQ Again",
         "title_description": "Welcome and join us!",
         "title_btn": "Join",
         "title_btn_url": "",
