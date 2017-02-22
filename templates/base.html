@@ -61,22 +61,44 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
-     $(".join-form").submit(function(e){
-        e.preventDefault()
-        var joinEmailAPIEndpoint = "{% url 'email-join' %}";
-        $.ajax({
-            method: "POST",
-            data: $(this).serialize(),
-            url: joinEmailAPIEndpoint,
-            success: function(data){
-                $(".join-form").parent().html("<p class='lead'>Success! Thanks for joining</p>")
-            }, 
-            error: function(data){
-                $(".join-form-alert").fadeIn();
-                $(".join-form-error").text(data.responseJSON.email[0])
+     $(document).ready(function(){
+        var $marketingModal = $("#signUpModal");
+        var didDismissModal = false;
+        $("body").mouseleave(function(){
+            if (!didDismissModal){
+                $marketingModal.modal()
             }
+            
         })
+
+        $marketingModal.on("hidden.bs.modal", function(e){
+            didDismissModal = true;
+        })
+
+        $(".join-form").submit(function(e){
+            e.preventDefault()
+            var joinEmailAPIEndpoint = "{% url 'email-join' %}";
+            $.ajax({
+                method: "POST",
+                data: $(this).serialize(),
+                url: joinEmailAPIEndpoint,
+                success: function(data){
+                    didDismissModal = true;
+                    $marketingModal.modal('hide')
+                    $(".join-form").parent().html("<p class='lead'>Success! Thanks for joining</p>")
+                }, 
+                error: function(data){
+                    $(".join-form-alert").fadeIn();
+                    $(".join-form-error").text(data.responseJSON.email[0])
+                }
+                })
+        })
+
+
     })
+
+
+
 
     </script>
     <script>
@@ -85,7 +107,14 @@
     })
     </script>
 
-
-
+    {% include 'newsletter/snippets/modal.html' %}
   </body>
 </html>
+
+
+
+
+
+
+
+
