@@ -25,6 +25,7 @@ class Page(models.Model):
     nav_color           = models.CharField(max_length=7, default='#000000', validators=[layout_validator])
     layout              = models.CharField(max_length=20, choices=LAYOUT_CHOICES, default='standard')
     video_embed         = models.TextField(null=True, blank=True)
+    slug                = models.SlugField(default='page-slug')
     featured            = models.BooleanField(default=False)
     active              = models.BooleanField(default=True)
 
