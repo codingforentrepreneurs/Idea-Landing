@@ -11,7 +11,10 @@
         "show_nav": true,
         "nav_color": "#820000",
         "layout": "standard",
-        "video_embed": "<iframe class=\"embed-responsive-item\"  width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/C0Hio55kZos\" frameborder=\"0\" allowfullscreen></iframe>"
+        "video_embed": "<iframe class=\"embed-responsive-item\"  width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/C0Hio55kZos\" frameborder=\"0\" allowfullscreen></iframe>",
+        "slug": "knockhq-again",
+        "featured": true,
+        "active": true
     }
 },
 {
@@ -26,7 +29,28 @@
         "show_nav": true,
         "nav_color": "#000000",
         "layout": "standard",
-        "video_embed": null
+        "video_embed": "",
+        "slug": "knock-2",
+        "featured": false,
+        "active": true
+    }
+},
+{
+    "model": "pages.page",
+    "pk": 3,
+    "fields": {
+        "title": "Knock 2",
+        "title_description": "",
+        "title_btn": "Join",
+        "title_btn_url": "",
+        "content": "",
+        "show_nav": true,
+        "nav_color": "#000000",
+        "layout": "standard",
+        "video_embed": "",
+        "slug": "knock-2-0e7y",
+        "featured": false,
+        "active": true
     }
 }
 ]
