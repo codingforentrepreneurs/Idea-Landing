@@ -31,6 +31,7 @@ class Page(models.Model):
     slug                = models.SlugField(default='page-slug', blank=True)
     featured            = models.BooleanField(default=False)
     active              = models.BooleanField(default=True)
+    leave_capture       = models.BooleanField(default=True)
 
     def save(self, *args, **kwargs):
         if self.featured:

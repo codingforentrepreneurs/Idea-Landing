@@ -64,8 +64,12 @@
      $(document).ready(function(){
         var $marketingModal = $("#signUpModal");
         var didDismissModal = false;
+        var doShowMarketing = false;
+
+        doShowMarketing = $(".leave-capture").attr('show') == 'true';
+        console.log(doShowMarketing)
         $("body").mouseleave(function(){
-            if (!didDismissModal){
+            if (!didDismissModal && doShowMarketing){
                 $marketingModal.modal()
             }
             
