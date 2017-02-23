@@ -3,9 +3,14 @@
   "description": "A Django project made for testing ideas via a landing page using TeamCFE",
   "repository": "https://github.com/codingforentrepreneurs/Idea-Landing",
   "logo": "https://cfe2-static.s3-us-west-2.amazonaws.com/media/projects/idea-landing/images/share/Idea_Landing_Share.png",
-  "keywords": ["django", "python", "landing-pages", "idea testing"],
-   "scripts": {
-        "postdeploy": "python manage.py migrate && python manage.py autosuperuser"
+  "keywords": [
+    "django",
+    "python",
+    "landing-pages",
+    "idea testing"
+  ],
+  "scripts": {
+    "postdeploy": "python manage.py migrate && python manage.py autosuperuser"
   },
   "env": {
     "SECRET_TOKEN": {
@@ -15,10 +20,10 @@
     "YOUR_WEBSITE": {
       "description": "What is the value of your website domain? Use the format (notice the . to start): .yourdomain.com",
       "value": ".yourdomain.com",
-      "required": false,
-    },
+      "required": false
+    }
   },
-   "addons": [
+  "addons": [
     {
       "plan": "heroku-postgresql"
     }
