@@ -1,0 +1,7 @@
+{
+  "name": "Idea Landing Page",
+  "description": "A Django project made for testing ideas via a landing page using TeamCFE",
+  "repository": "https://github.com/codingforentrepreneurs/Idea-Landing",
+  "logo": "https://cfe2-static.s3-us-west-2.amazonaws.com/media/projects/idea-landing/images/share/Idea_Landing_Share.png",
+  "keywords": ["django", "python", "landing-pages", "idea testing"]
+}
