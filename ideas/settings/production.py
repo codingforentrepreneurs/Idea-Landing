@@ -27,6 +27,7 @@ DEBUG = False
 
 your_website = os.environ.get('YOUR_WEBSITE', '.example.com')
 ALLOWED_HOSTS = ['.herokuapp.com', '.knockhq.com', your_website]
+PROJECT_NAME  = os.environ.get('PROJECT_NAME', 'HiitLanding')
 
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = 'youremail@gmail.com' #my gmail username
@@ -81,6 +82,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #'ideas.context_processors.hiit_project_name',
             ],
         },
     },

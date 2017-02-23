@@ -13,14 +13,19 @@
     "postdeploy": "python manage.py migrate && python manage.py autosuperuser"
   },
   "env": {
+    "PROJECT_NAME": {
+      "description": "What is the name you want to call your project?",
+      "value": "Hiit Landing",
+      "required": true
+    },
+    "YOUR_WEBSITE": {
+      "description": "What is your website domain? .yourdomain.com (include the first '.'; can be set later)",
+      "value": ".yourdomain.com",
+      "required": false
+    },
     "SECRET_TOKEN": {
       "description": "Django project secret token.",
       "generator": "secret"
-    },
-    "YOUR_WEBSITE": {
-      "description": "What is the value of your website domain? Use the format (notice the . to start): .yourdomain.com",
-      "value": ".yourdomain.com",
-      "required": false
     }
   },
   "addons": [
