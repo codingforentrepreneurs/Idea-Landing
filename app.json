@@ -9,7 +9,6 @@
     "landing-pages",
     "idea testing"
   ],
-  "success_url": "/welcome",
   "scripts": {
     "postdeploy": "python manage.py migrate && python manage.py autosuperuser"
   },
