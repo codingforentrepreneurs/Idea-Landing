@@ -8,7 +8,7 @@ class JoinForm(forms.ModelForm):
             widget=forms.EmailInput(
                     attrs={
                         'placeholder':'Your email', 
-                            'class': 'form-control'
+                            'class': 'form-control sign-up-email-form'
                     }
                 ))
     class Meta:
