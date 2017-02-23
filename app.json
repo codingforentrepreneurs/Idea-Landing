@@ -11,7 +11,12 @@
     "SECRET_TOKEN": {
       "description": "Django project secret token.",
       "generator": "secret"
-    }
+    },
+    "YOUR_WEBSITE": {
+      "description": "What is the value of your website domain? Use the format (notice the . to start): .yourdomain.com",
+      "value": ".yourdomain.com",
+      "required": false,
+    },
   },
    "addons": [
     {

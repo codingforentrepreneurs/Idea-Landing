@@ -25,7 +25,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '+9!j2(jk7v$7+0b1v(z9+3vnm(jb0u@&w68t#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.herokuapp.com', '.knockhq.com']
+your_website = os.environ.get('YOUR_WEBSITE', '.example.com')
+ALLOWED_HOSTS = ['.herokuapp.com', '.knockhq.com', your_website]
 
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = 'youremail@gmail.com' #my gmail username
