@@ -10,6 +10,9 @@ Watch here: [https://www.codingforentrepreneurs.com/projects/idea-landing/](http
 
 [![Deploy to Heroku Icon](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/codingforentrepreneurs/Idea-Landing/tree/master)
 
+If using a custom domain, go to your Heroku account `https://dashboard.heroku.com/apps/<your-app-name>/settings` then add your custom domain. Ensure this domain is in your `Config Variables` which is also on that page. Restart all dynos if needed.
+
+
 =====
 
 Launching on your own project:
