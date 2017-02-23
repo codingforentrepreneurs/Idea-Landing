@@ -8,6 +8,7 @@ Use this project to launch your idea today.
 Watch here: [https://www.codingforentrepreneurs.com/projects/idea-landing/](https://www.codingforentrepreneurs.com/projects/idea-landing/)
 
 
+[![Deploy to Heroku Icon](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/codingforentrepreneurs/Idea-Landing/tree/master)
 
 =====
 
