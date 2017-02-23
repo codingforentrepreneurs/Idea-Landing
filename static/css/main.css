@@ -4,5 +4,5 @@ body {
 }
 
 .sign-up-email-form {
-    width: 275px;
+    width: 275px !important;
 }
