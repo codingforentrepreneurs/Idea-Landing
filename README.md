@@ -59,3 +59,10 @@ Launching on your own project:
     $ heroku run python manage.py migrate
     $ heroku run python manage.py createsuperuser
     ```
+   
+6. Add Custom Domain (optional):
+    - Update `production.py`'s `ALLOWED_HOSTS` to include your custom domain such as `ALLOWED_HOSTS = ['.sporproject.com', 'knockhq.herokuapp.com']`
+    ```
+    $ heroku domains:add *.sporproject.com
+    ```
+    Update your DNS as needed [here](https://github.com/codingforentrepreneurs/Guides/blob/master/all/Heroku_Django_Deployment_Guide.md#add-custom-domain-name)
