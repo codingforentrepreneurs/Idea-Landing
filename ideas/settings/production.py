@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+9!j2(jk7v$7+0b1v(z9+3vnm(jb0u@&w68t#5_e8s9-lbfhv-'
-
+#SECRET_KEY = '+9!j2(jk7v$7+0b1v(z9+3vnm(jb0u@&w68t#5_e8s9-lbfhv-'
+SECRET_KEY = os.environ.get('SECRET_KEY', '+9!j2(jk7v$7+0b1v(z9+3vnm(jb0u@&w68t#5_e8s9-lbfhv-')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['cfeideas.herokuapp.com', '.knockhq.com']
+ALLOWED_HOSTS = ['.herokuapp.com', '.knockhq.com']
 
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = 'youremail@gmail.com' #my gmail username
@@ -50,6 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+
+    'accounts', #only for the management command 'autosuperuser'
     'newsletter',
     'pages',
 ]
