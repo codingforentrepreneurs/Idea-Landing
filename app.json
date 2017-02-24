@@ -19,7 +19,7 @@
       "required": true
     },
     "YOUR_WEBSITE": {
-      "description": "What is your website domain? .yourdomain.com (include the first '.'; can be set later)",
+      "description": "What is your website domain? Include the first period (.) and ignore 'www': \n .yourdomain.com",
       "value": ".yourdomain.com",
       "required": false
     },
