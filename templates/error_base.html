@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% block title %}Knock HQ{% endblock %}</title>
+    <title>{% block title %}{{ request.project_name }}{% endblock %}</title>
 
     {% include 'head_css.html' %}
     <!-- Custom styles for this template -->
@@ -25,7 +25,7 @@
 
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand"><a href='/'>KnockHQ</a></h3>
+              <h3 class="masthead-brand"><a href='/'>{{ request.project_name }}</a></h3>
               <!-- <nav>
                 <ul class="nav masthead-nav">
                   <li class="active"><a href="#">Home</a></li>
@@ -43,7 +43,7 @@
 
           <div class="mastfoot">
             <div class="inner">
-              <p><a href='/'>KnockHQ</a></p>
+              <p><a href='/'>{{ request.project_name }}</a></p>
             </div>
           </div>
 
