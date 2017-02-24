@@ -12,7 +12,7 @@ class Command(BaseCommand):
                     title_description='This site is an example of you can build easily with Hiit Landing. Check out the video for more.',
                     title_btn = 'Learn More',
                     title_btn_url = 'http://www.hiitlanding.com',
-                    jumbotron_bg_color='#ffb200',
+                    jumbotron_bg_color='#ffb400',
                     content = html_,
                     video_embed ='<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/C0Hio55kZos?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>',
                     featured=True,
