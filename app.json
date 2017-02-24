@@ -10,7 +10,7 @@
     "idea testing"
   ],
   "scripts": {
-    "postdeploy": "python manage.py migrate && python manage.py autosuperuser"
+    "postdeploy": "python manage.py migrate && python manage.py autosuperuser && python manage.py generatehiitpage"
   },
   "env": {
     "PROJECT_NAME": {
