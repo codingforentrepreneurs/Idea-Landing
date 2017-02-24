@@ -4,7 +4,7 @@
       <div class='row'>
             <div class='col-sm-12 text-center'>
               <h1>{{ page_obj.title }}</h1>
-              <p>{{ page_obj.title_description|linebreaks }}</p>
+              <p>{{ page_obj.title_description|safe }}</p>
               {% if title_btn_url %}
               <p><a class="btn btn-primary btn-lg" href="{{ title_btn_url }}" role="button">{{ title_btn }}</a></p>
               {% endif %}
