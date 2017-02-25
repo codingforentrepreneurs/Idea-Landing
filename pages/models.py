@@ -26,7 +26,7 @@ class Page(models.Model):
     jumbotron_text_color = models.CharField(max_length=7, default='#000000', validators=[layout_validator])
     jumbotron_bg_color   = models.CharField(max_length=7, default='#eeeeee', validators=[layout_validator])
     content             = models.TextField(blank=True, null=True)
-    show_nav            = models.BooleanField(default=True)
+    show_nav            = models.BooleanField(default=True, help_text='Show Navigation Bar?')
     nav_color           = models.CharField(max_length=7, default='#000000', validators=[layout_validator])
     layout              = models.CharField(max_length=20, choices=LAYOUT_CHOICES, default='standard')
     video_embed         = models.TextField(null=True, blank=True)
