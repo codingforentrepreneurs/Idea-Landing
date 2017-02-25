@@ -2,26 +2,18 @@
     <div class='alert alert-danger alert-dismissable join-form-alert' style='display:none'> <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <span class='join-form-error'></span>
     </div>
-    {% if form.non_field_errors %}
-        <div class='alert alert-danger alert-dismissable'><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>{{ form.non_field_errors }}</div>
-    {% endif %}
     <div class='input-group'>
     <label style='padding: 0px 20px;font-size: 20px;'>
     Join Us
     </label>
     </div>
-    {% for field in form %}
-        {% if field.errors %}
-            <div class='alert alert-danger alert-dismissable'><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>{{ field.errors }}</div>
-        {% endif %}
         <div class="input-group">
 
-         {{ field }}
+         <input type='email' name='email' class='form-control sign-up-email-form' placeholder="Your email...">
          <div class='input-group-addon' style="background-color: #fff; border-left:0px;">
             <i class='fa fa-envelope'></i>
          </div>
           
         </div><!-- /input-group -->
-    {% endfor %}
     <input type='submit' value='Join' class='btn btn-primary' />
 </form>
