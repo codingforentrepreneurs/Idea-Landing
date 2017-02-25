@@ -14,7 +14,7 @@ class Command(BaseCommand):
                     title_btn_url = 'http://www.hiitlanding.com',
                     jumbotron_bg_color='#ffb400',
                     content = html_,
-                    video_embed ='<div style="position:relative;height:0;padding-bottom:56.25%"><iframe src="https://www.youtube.com/embed/C0Hio55kZos?ecver=2" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>',
+                    video_embed ='<div style="position:relative;height:0;padding-bottom:56.25%"><iframe width="560" height="315" src="https://www.youtube.com/embed/9R1ofeFSrr4" frameborder="0" allowfullscreen></iframe></div>',
                     featured=True,
                     active=True,
                     show_nav=False,
