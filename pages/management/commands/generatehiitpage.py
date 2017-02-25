@@ -5,7 +5,7 @@ from pages.models import Page
 class Command(BaseCommand):
     def handle(self, *args, **options):
         qs = Page.objects.all()
-        if qs.count() < 110:
+        if qs.count() < 2:
             html_ = get_template('pages/defaults/hiit-page-default.html').render({})
             Page.objects.create(
                     title= 'Welcome to Hiit Landing',
