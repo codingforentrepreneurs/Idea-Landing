@@ -1,4 +1,4 @@
-appdirs==1.4.0
+appdirs==1.4.3
 dj-database-url==0.4.2
 Django==1.10.5
 django-crispy-forms==1.6.1
