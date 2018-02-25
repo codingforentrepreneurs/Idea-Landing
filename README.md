@@ -2,8 +2,6 @@
 
 [![Deploy to Heroku Icon](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/codingforentrepreneurs/Idea-Landing/tree/master)
 
-^^^Click^^^
-
 **Release Notes // Feb 2018**
 - Upgraded to Django 2
 - Upgraded Python to 3.6
