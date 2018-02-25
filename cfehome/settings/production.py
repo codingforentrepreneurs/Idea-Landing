@@ -69,7 +69,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'ideas.urls'
+ROOT_URLCONF = 'cfehome.urls'
 
 TEMPLATES = [
     {
@@ -82,13 +82,13 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'ideas.context_processors.hiit_project_name',
+                'cfehome.context_processors.hiit_project_name',
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'ideas.wsgi.application'
+WSGI_APPLICATION = 'cfehome.wsgi.application'
 
 
 # Database
