@@ -4,5 +4,5 @@ from django.core.management.base import BaseCommand
 class Command(BaseCommand):
     def handle(self, *args, **options):
         User = get_user_model()
-        if not User.objects.filter(username="amdin").exists():
+        if not User.objects.filter(username="admin").exists():
             User.objects.create_superuser("admin", "admin@site.com", "adminPASS2017!")
