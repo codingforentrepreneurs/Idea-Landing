@@ -1,4 +1,8 @@
 ideas/settings/local.py
+
+live-static/static-root/
+live-static/media-root/
+
 .DS_Store
 
 # Byte-compiled / optimized / DLL files
